@@ -1,5 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact, removeContact } from 'redux/items/items-action';
+import {
+  addContact,
+  removeContact,
+  fetchContacts,
+} from 'redux/items/items-action';
+import { useEffect } from 'react';
 
 import { setFilter } from 'redux/filter/filter-action';
 
@@ -10,7 +15,12 @@ import Form from './Form/Form';
 const App = () => {
   const contacts = useSelector(store => store.contacts.contacts);
   const filter = useSelector(store => store.contacts.filter);
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   const onAddContacts = ({ name, number }) => {
     const action = addContact(name, number);
