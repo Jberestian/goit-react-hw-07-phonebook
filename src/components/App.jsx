@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import {
+  fetchContacts,
   addContact,
   removeContact,
-  fetchContacts,
-} from 'redux/items/items-action';
+} from 'redux/items/items-operations';
 import { useEffect } from 'react';
 
 import { setFilter } from 'redux/filter/filter-action';
