@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import { addContact, removeContact, fetchContacts } from './items-action';
+import { fetchContacts, addContact, removeContact } from './items-action';
 
 export const contactsReducers = createReducer([], {
   [fetchContacts]: async store => {},
