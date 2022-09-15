@@ -1,4 +1,3 @@
-// import { createReducer } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
 import { fetchContacts, addContact, removeContact } from './items-operations';
@@ -8,13 +7,6 @@ const intitialStore = {
   loading: false,
   error: null,
 };
-
-// export const contactsReducers = createReducer(intitialStore, {
-//   [fetchContacts]: async store => {},
-//   [addContact]: (store, { payload }) => [...store, payload],
-//   [removeContact]: (store, { payload }) =>
-//     store.filter(item => item.id !== payload),
-// });
 
 export const contactsReducers = createSlice({
   name: 'contacts',
