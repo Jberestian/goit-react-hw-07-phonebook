@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { fetchContacts, addContact, removeContact } from './items-operations';
 
-const intitialStore = {
+const intitialState = {
   items: [],
   loading: false,
   error: null,
@@ -10,7 +10,7 @@ const intitialStore = {
 
 export const contactsReducers = createSlice({
   name: 'contacts',
-  intitialStore,
+  intitialState,
   extraReducers: {
     [fetchContacts.pending]: store => {
       store.loading = true;
