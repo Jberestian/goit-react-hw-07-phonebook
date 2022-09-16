@@ -12,8 +12,8 @@ import ContactBook from './ContactBook/ContactBook';
 import Filter from './Filter/Filter';
 import Form from './Form/Form';
 
-import { getFilter } from 'redux/filter/filter-selector';
-import { getItems } from 'redux/items/items-selector';
+import { getFilter } from 'redux/filter/selectors';
+import { getItems } from 'redux/items/selectors';
 
 const App = () => {
   const getState = ({ contacts }) => ({

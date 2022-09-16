@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-
 import * as api from '../../api/contactsApi';
 
 const isDublicate = ({ name }, items) => {
